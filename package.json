@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sfdx shane:org:delete; ./orgInit.sh",
+    "build": "yarn destroy; ./orgInit.sh",
     "publish": "sfdx shane:package2:version:bump -m -r; git add sfdx-project.json; git commit -m 'package version bump'; git push origin master",
-    "reset": "echo \"sfdx force:apex:execute -f scripts/dataWipe.cls && sfdx force:apex:execute -f scripts/init.cls\""
+    "reset": "echo \"sfdx force:apex:execute -f scripts/dataWipe.cls && sfdx force:apex:execute -f scripts/init.cls\"",
+    "destroy": "sfdx shane:org:delete; heroku destroy -a `basename \"${PWD/mshanemc-/}\"` -c `basename \"${PWD/mshanemc-/}\"`"
   },
   "nodemonConfig": {
     "watch": [
@@ -23,7 +24,7 @@
   "author": "Shane McLaughlin",
   "license": "ISC",
   "bugs": {
-    "url": "https//github.com/mshanemc/evlpg-demo/issues"
+    "url": "https://github.com/mshanemc/evlpg-demo/issues"
   },
   "homepage": "https//github.com/mshanemc/evlpg-demo",
   "devDependencies": {
