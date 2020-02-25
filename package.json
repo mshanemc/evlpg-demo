@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https//github.com/mshanemc/evlpg-demo.git"
+    "url": "git+https://github.com/mshanemc/evlpg-demo.git"
   },
   "author": "Shane McLaughlin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mshanemc/evlpg-demo/issues"
   },
-  "homepage": "https//github.com/mshanemc/evlpg-demo",
+  "homepage": "https://github.com/mshanemc/evlpg-demo",
   "devDependencies": {
     "nodemon": "^1.19.2"
   }
